@@ -12,15 +12,14 @@
 				<directory>resources/properties</directory>
 			</resource>
 		</resources>
-        <sourceDirectory>src</sourceDirectory>
-        <testSourceDirectory>scr-test</testSourceDirectory>
+        <sourceDirectory>src</sourceDirectory>   
         <plugins>
             <plugin>
                  <artifactId>maven-compiler-plugin</artifactId>
                  <version>3.1</version>
                  <configuration>
-                  <source>1.6</source>
-                  <target>1.6</target>
+                  <source>1.7</source>
+                  <target>1.7</target>
                  </configuration>
             </plugin>
             <plugin>
@@ -28,12 +27,18 @@
                 <configuration>
                     <archive>
                         <manifest>
-                             <mainClass>main.java.tunnel.TunnelServerRun</mainClass>
+                             <mainClass>com.server.tunnel.TunnelServerRun</mainClass>
                         </manifest>
                     </archive>
                     <descriptorRefs>
                         <descriptorRef>jar-with-dependencies</descriptorRef>
                     </descriptorRefs>
+                    <archive>
+						<manifest>
+							<addClasspath>true</addClasspath>
+							<mainClass>com.server.tunnel.TunnelServerRun</mainClass>
+						</manifest>
+					</archive>
                 </configuration>
                     <executions>
                         <execution>
