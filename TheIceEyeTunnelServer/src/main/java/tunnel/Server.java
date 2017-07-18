@@ -50,6 +50,8 @@ public class Server {
 		try {
 			while (true) {
 				log.info("Waiting for client on port " + serverSocket.getLocalPort() + "...");
+				log.info("Tunnel Server started");
+				System.out.println("Tunnel Server started");
 				// TODO USING SSLSOCKET FOR MORE SECURITY BETWEEN CLIENT AND
 				// SERVER
 				Socket server = serverSocket.accept();
